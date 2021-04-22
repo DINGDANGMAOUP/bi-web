@@ -499,38 +499,12 @@ export default {
               }
             ]
           }
-        ],
-        外部链接: [
-          {
-            name: 'BI使用情况',
-            url: 'https://www.baidu.com'
-          },
-          {
-            name: '块数据更新',
-            url: 'https://www.baidu.com'
-          },
-          {
-            name: '订单BOM分析',
-            url: 'https://www.baidu.com'
-          },
-          {
-            name: 'OA日记完成情况',
-            url: 'https://www.baidu.com'
-          }
         ]
       }
     }
   },
   methods: {
-    // Create an array the length of our items
-    // with all values as true
-    all () {
-      this.panel = [...Array(this.items).keys()].map((k, i) => i)
-    },
-    // Reset the panel
-    none () {
-      this.panel = []
-    }
+
   }
 }
 </script>
