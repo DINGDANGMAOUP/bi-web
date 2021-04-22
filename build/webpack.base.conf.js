@@ -75,6 +75,10 @@ module.exports = {
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
       },
+      // {
+      //   test: /\.scss$/,
+      //   loaders: ['style', 'css', 'sass']
+      // },
       {
         test: /\.s(c|a)ss$/,
         use: [
@@ -82,16 +86,15 @@ module.exports = {
           'css-loader',
           {
             loader: 'sass-loader',
-            // Requires sass-loader@^8.0.0
+            // Requires sass-loader@^7.0.0
             options: {
               implementation: require('sass'),
-              sassOptions: {
-                indentedSyntax: true // optional
-              },
+              indentedSyntax: true // optional
             },
           },
         ],
       }
+
 
     ]
   },
