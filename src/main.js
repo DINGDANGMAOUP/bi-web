@@ -3,27 +3,33 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-// import Vuetify from '@/plugins/vuetify'
-import Vuetify from 'vuetify'
+// import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 import '@mdi/font/css/materialdesignicons.css'
+import VueParticles from 'vue-particles'
+import api from './http'
+import global from './utils/global'
+import 'font-awesome/css/font-awesome.min.css'
+import i18n from './i18n'
+import store from './store'
+import vuetify from '@/plugins/vuetify'
+// import Vuelidate from 'vuelidate'
+// import VeeValidate from 'vee-validate'
 Vue.config.productionTip = false
-Vue.use(Vuetify)
-const opts = {
-  icons: {
-    iconfont: 'mdi'
-  }
-}
+Vue.use(VueParticles)
+require('@/mock/index.js')
+Vue.prototype.global = global
+Vue.use(api)
+
+// Vue.use(Vuelidate)
+// Vue.use(VeeValidate)
+
 /* eslint-disable no-new */
-// new Vue({
-//   el: '#app',
-//   router,
-//   Vuetify,
-//   Components: { App },
-//   template: '<App/>'
-// })
+
 new Vue({
   router,
-  vuetify: new Vuetify(opts),
+  vuetify,
+  store,
+  i18n,
   render: h => h(App)
 }).$mount('#app')

@@ -2,11 +2,11 @@
   <div className="container">
   <v-app id="inspire">
 <!--    系统栏-->
-    <SystemBar/>
+<!--    <SystemBar/>-->
 <!--    应用栏-->
     <AppBar/>
 <!--    菜单栏-->
-    <NavBar/>
+<!--    <NavBar/>-->
 <!--    网格主区域-->
     <MainContent/>
   </v-app>
@@ -28,13 +28,13 @@ export default {
   }
 }
 </script>
-<!--<style lang="scss" scoped>-->
-<!--.container {-->
-<!--  position: absolute;-->
-<!--  top: 0px;-->
-<!--  left: 0px;-->
-<!--  right: 0px;-->
-<!--  bottom: 0px;-->
-<!--// background: rgba(224, 234, 235, 0.1);-->
-<!--}-->
-<!--</style>-->
+<style lang="scss" scoped>
+.container {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+// background: rgba(224, 234, 235, 0.1);
+}
+</style>

@@ -2,7 +2,6 @@
   <v-main class="grey lighten-2">
     <v-container>
       <v-row  >
-
         <v-col
           v-for="(item,index) in list"
           :key="index"
