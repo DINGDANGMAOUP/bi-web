@@ -2,6 +2,8 @@
   <v-app-bar app >
     <v-toolbar-title>Application</v-toolbar-title>
     <v-spacer></v-spacer>
+    <v-theme-provider></v-theme-provider>
+
     <div class="text-center">
       <v-menu
         v-model="menu"
@@ -98,8 +100,12 @@
 </template>
 
 <script>
+// import ThemePicker from '@/components/ThemePicker'
 export default {
   name: 'AppBar',
+  components: {
+    // ThemePicker
+  },
   data () {
     return {
       user: {

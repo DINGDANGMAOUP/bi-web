@@ -16,7 +16,7 @@
 <script>
 import SystemBar from '@/views/Layout/HeadBar/SystemBar'
 import AppBar from '@/views/Layout/HeadBar/AppBar'
-// import NavBar from '@views/Layout/NavBar'
+// import NavBar from '@/views/Layout/NavBar'
 import MainContent from '@/views/Layout/MainContent'
 export default {
   name: 'Home',

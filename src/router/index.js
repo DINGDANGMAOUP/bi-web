@@ -5,6 +5,7 @@ import NotFound from '@/views/404'
 import Login from '@/views/Login'
 import api from '@/http/api'
 import store from '@/store'
+import NavBar from '@/views/Layout/NavBar'
 Vue.use(Router)
 
 const router = new Router({
@@ -12,7 +13,14 @@ const router = new Router({
     {
       path: '/',
       name: 'Home',
-      component: Home
+      component: Home,
+      children: [
+        {
+          path: '',
+          name: '导航',
+          component: NavBar
+        }
+      ]
     },
     {
       path: '/404',
