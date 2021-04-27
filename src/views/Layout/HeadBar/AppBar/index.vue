@@ -1,7 +1,9 @@
 <template>
-  <v-app-bar app >
-    <v-toolbar-title>Application</v-toolbar-title>
+  <v-app-bar app style="background-color: #009550 ">
+    <v-toolbar-title>银鹭BI Portal</v-toolbar-title>
+
     <v-spacer></v-spacer>
+
     <v-theme-provider></v-theme-provider>
 
     <div class="text-center">
@@ -36,8 +38,8 @@
               </v-list-item-avatar>
 
               <v-list-item-content>
-                <v-list-item-title>John Leider</v-list-item-title>
-                <v-list-item-subtitle>Founder of Vuetify</v-list-item-subtitle>
+                <v-list-item-title>{{ loginForm.account }}</v-list-item-title>
+<!--                <v-list-item-subtitle>Founder of Vuetify</v-list-item-subtitle>-->
               </v-list-item-content>
 
               <v-list-item-action>
@@ -55,6 +57,11 @@
           <v-divider></v-divider>
 
           <v-list>
+<!--            <v-list-item>-->
+<!--              <v-list-item-action>-->
+<!--                <v-btn>Sign out</v-btn>-->
+<!--              </v-list-item-action>-->
+<!--            </v-list-item>-->
             <v-list-item>
               <v-list-item-action>
                 <v-switch
@@ -88,9 +95,9 @@
             <v-btn
               color="primary"
               text
-              @click="menu = false"
+              @click="logout()"
             >
-              Save
+              Sign out
             </v-btn>
           </v-card-actions>
         </v-card>
@@ -101,6 +108,7 @@
 
 <script>
 // import ThemePicker from '@/components/ThemePicker'
+import router from '@/router'
 export default {
   name: 'AppBar',
   components: {
@@ -108,6 +116,9 @@ export default {
   },
   data () {
     return {
+      loginForm: {
+        account: localStorage.getItem('username')
+      },
       user: {
         initials: 'JD',
         fullName: 'John Doe',
@@ -117,6 +128,14 @@ export default {
       menu: false,
       message: false,
       hints: true
+    }
+  },
+  methods: {
+    logout () {
+      localStorage.clear()
+      sessionStorage.clear()
+      this.$store.commit('menuRouteLoaded', false)
+      router.push('/login')
     }
   }
   // data: () => ({ drawer: null })

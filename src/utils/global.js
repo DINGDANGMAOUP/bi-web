@@ -5,8 +5,8 @@
  */
 
 // 后端请求地址
-// export const baseUrl = ''
-export const baseUrl = 'http://localhost:8081'
+export const baseUrl = 'http://localhost:8089'
+// export const baseUrl = 'http://10.10.201.130:8089'
 // 系统数据备份还原服务器地址
 // export const backupBaseUrl = ''
 export const backupBaseUrl = 'http://localhost:8081'

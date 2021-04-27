@@ -17,7 +17,7 @@
 <!--    </div>-->
     <!-- 主内容区域 -->
 <!--    <div class="main-content">-->
-  <v-main>
+  <v-main class="grey lighten-2">
     <v-container>
       <keep-alive>
         <transition name="fade" mode="out-in">

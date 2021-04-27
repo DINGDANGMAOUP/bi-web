@@ -22,12 +22,14 @@
                       label="account"
                       name="account"
                       prepend-icon="mdi-account"
+                      v-model="loginForm.account"
                       type="text"
                     ></v-text-field>
                     <v-text-field
                       id="password"
                       label="Password"
                       name="password"
+                      v-model="loginForm.password"
                       prepend-icon="mdi-lock"
                       :type="passwordDisplay ? 'text' : 'password'"
                       :append-icon="passwordDisplay ? 'mdi-eye' : 'mdi-eye-off'"
@@ -116,7 +118,7 @@ export default {
         color: 'primary'
       },
       loginForm: {
-        account: 'admin',
+        account: 'biadmin',
         password: 'admin',
         captcha: '',
         src: ''
@@ -135,11 +137,14 @@ export default {
   methods: {
     login () {
       // this.loading = true
+      this.$store.commit('setUserName')
       let userInfo = {
         account: this.loginForm.account,
         password: this.loginForm.password,
         captcha: this.loginForm.captcha
       }
+      this.$store.commit('setUserName', this.loginForm.account)
+      localStorage.setItem('username', this.loginForm.account)
       this.$api.login.login(userInfo).then((res) => { // 调用登录接口
         if (res.msg != null) {
           this.snackbar.show = true
@@ -153,7 +158,7 @@ export default {
         // this.loading = false
       }).catch((res) => {
         this.snackbar.show = true
-        this.snackbar.text = res.message
+        this.snackbar.text = '未找到用户信息'
       })
     },
     refreshCaptcha: function () {

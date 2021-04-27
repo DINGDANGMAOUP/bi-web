@@ -4,9 +4,10 @@ import axios from '../axios'
  */
 
 // 获取报表列表
-export const getReports = () => {
+export const getReports = (params) => {
   return axios({
-    url: 'list/all',
-    method: 'get'
+    url: 'menu/tree',
+    method: 'get',
+    params
   })
 }

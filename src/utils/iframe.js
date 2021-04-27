@@ -13,7 +13,7 @@ export function getIFramePath (url) {
   if (/^iframe:.*/.test(url)) {
     iframeUrl = url.replace('iframe:', '')
   } else if (/^http[s]?:\/\/.*/.test(url)) {
-    iframeUrl = url.replace('http://', '')
+    iframeUrl = url.replace('https://', '')
     // eslint-disable-next-line eqeqeq
     if (iframeUrl.indexOf(':') != -1) {
       iframeUrl = iframeUrl.substring(iframeUrl.lastIndexOf(':') + 1)

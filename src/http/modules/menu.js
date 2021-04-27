@@ -31,7 +31,7 @@ export const findNavTree = (params) => {
 // 查找导航菜单树
 export const findMenuTree = () => {
   return axios({
-    url: '/menu/findMenuTree',
+    url: '/menu/tree',
     method: 'get'
   })
 }
