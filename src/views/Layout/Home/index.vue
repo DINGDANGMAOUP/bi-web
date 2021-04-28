@@ -9,6 +9,10 @@
 <!--    <NavBar/>-->
 <!--    网格主区域-->
     <MainContent/>
+<!--    <footer class="" style="background-color: #009550 ">-->
+<!--      {{new Date().getFullYear()}}— <strong>YINLU</strong>-->
+<!--      闽ICP备09004564号  银鹭食品版权所有CopyRight2013 www.yinlu.com All Rights Reserved-->
+<!--    </footer>-->
   </v-app>
   </div>
 </template>

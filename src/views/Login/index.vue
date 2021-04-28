@@ -13,22 +13,22 @@
           <v-flex xs12 sm8 md6 lg5 xl3>
             <v-card class="elevation-12">
               <v-toolbar color="primary" dark flat>
-                <v-toolbar-title>Sign in</v-toolbar-title>
+                <v-toolbar-title>欢迎光临</v-toolbar-title>
                 <v-spacer></v-spacer>
               </v-toolbar>
               <v-card-text>
                 <v-form ref="login_form">
                     <v-text-field
-                      label="account"
-                      name="account"
+                      label="用户名"
+                      name="用户名"
                       prepend-icon="mdi-account"
                       v-model="loginForm.account"
                       type="text"
                     ></v-text-field>
                     <v-text-field
                       id="password"
-                      label="Password"
-                      name="password"
+                      label="密码"
+                      name="密码"
                       v-model="loginForm.password"
                       prepend-icon="mdi-lock"
                       :type="passwordDisplay ? 'text' : 'password'"
@@ -68,7 +68,7 @@
                   :loading="loginLoading"
                   color="primary"
                   @click="login ()"
-                >Sign in
+                >登入
                 </v-btn
                 >
               </v-card-actions>

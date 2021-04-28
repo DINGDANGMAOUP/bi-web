@@ -99,7 +99,7 @@ export default {
 .main-container {
   padding: 0 5px 5px;
   position: absolute;
-  top: 60px;
+  top: 10px;
   left: 1px;
   right: 1px;
   bottom: 0px;

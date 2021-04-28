@@ -1,5 +1,5 @@
 <template>
-  <v-main class="grey lighten-2" style="width:99%;margin-top:15px;">
+  <v-main class="grey lighten-2" style="padding-top: 0px" >
     <v-container>
       <v-row>
         <v-col
@@ -9,7 +9,7 @@
           sm="4"
         >
           <v-toolbar flat>
-            <v-toolbar-title align="center">{{ item.rname }}</v-toolbar-title>
+            <v-toolbar-title >{{ item.rname }}</v-toolbar-title>
           </v-toolbar>
           <v-expansion-panels
             accordion
@@ -21,10 +21,31 @@
               <v-expansion-panel-header>
                 {{ch.rname}}
               </v-expansion-panel-header>
-              <v-expansion-panel-content>
-                <v-btn block  v-for="(ch1,i1) in ch.children" :key="i1"   @click="Jump(ch1.rurl)">
-                  {{ ch1.rname  }}
-                </v-btn>
+              <v-expansion-panel-content align="left">
+<!--                <v-chip-->
+<!--                  class="align-start"-->
+<!--                  label-->
+<!--                  outlined-->
+<!--                  v-for="(ch1,i1) in ch.children" :key="i1"   @click="Jump(ch1.rurl)"-->
+<!--                >-->
+<!--                  {{ ch1.rname  }}-->
+<!--                </v-chip>-->
+                <v-list>
+                 <v-list-item
+                   class="grey--text mb-2"
+                   v-for="(ch1,i1) in ch.children" :key="i1"   @click="Jump(ch1.rurl)"
+                 >
+                   <v-icon>mdi-file-table</v-icon>
+<!--                   <v-list-item-icon > mdi-file-table</v-list-item-icon>-->
+                   <v-list-item-content v-text="ch1.rname"></v-list-item-content>
+                 </v-list-item>
+                </v-list>
+<!--                <div align="left" plane  v-for="(ch1,i1) in ch.children" :key="i1"   @click="Jump(ch1.rurl)" >-->
+<!--                  {{ ch1.rname  }}-->
+<!--                </div>-->
+<!--                <v-btn  align="left" block  v-for="(ch1,i1) in ch.children" :key="i1"   @click="Jump(ch1.rurl)">-->
+<!--                  {{ ch1.rname  }}-->
+<!--                </v-btn>-->
 <!--                <v-expansion-panels accordion>-->
 <!--                  <v-expansion-panel v-for="(ch1,i1) in ch.children" :key="i1">-->
 <!--                    <v-expansion-panel-header>{{ ch1.rname }}</v-expansion-panel-header>-->
