@@ -8,17 +8,16 @@
                   outlined
                   v-for="(first,fIndex) in list" :key="fIndex" v-if="fIndex%3===0">
             <v-card-title>{{ first.rname }}</v-card-title>
-            <v-list subheader dense v-for="(second,sIndex) in first.children" :key="sIndex">
-              <v-list-item-content  >
-                <v-list-item-subtitle v-text="second.rname" ></v-list-item-subtitle>
-              </v-list-item-content>
-              <v-chip
-                label
-                outlined
-                v-for="(third,tIndex) in second.children" :key="tIndex" @click="Jump(third.rurl)"
-              >
-                {{ third.rname }}
-              </v-chip>
+            <v-list
+                    nav
+                    subheader
+                    dense
+                    v-for="(second,sIndex) in first.children"
+                    :key="sIndex">
+               <v-list-item align="left"><v-list-item-title v-text="second.rname"></v-list-item-title></v-list-item>
+              <v-list-item  v-for="(third,tIndex) in second.children" :key="tIndex" @click="Jump(third.rurl)">
+                <v-list-item-subtitle align="left" v-text="third.rname"></v-list-item-subtitle>
+              </v-list-item>
             </v-list>
           </v-card>
         </v-col>
@@ -48,7 +47,7 @@
             outlined
             v-for="(first,fIndex) in list" :key="fIndex" v-if="fIndex%3===2">
             <v-card-title>{{ first.rname }}</v-card-title>
-            <v-list v-for="(second,sIndex) in first.children" :key="sIndex">
+            <v-list  v-for="(second,sIndex) in first.children" :key="sIndex">
               <v-list-item-title>{{ second.rname }}</v-list-item-title>
               <v-list-item v-for="(third,tIndex) in second.children" :key="tIndex" @click="Jump(third.rurl)">
                 <v-chip
