@@ -1,6 +1,6 @@
 <template>
   <div class="iframe-container">
-    <iframe src="https://bi.yinlu.com/reports/mobilereport/109%20%E4%BA%BA%E5%8A%9B%E8%B5%84%E6%BA%90%EF%BC%88HR%EF%BC%89/%E8%90%A5%E4%B8%9A%E9%83%A8%E4%BA%BA%E5%8A%9B%E8%B5%84%E6%BA%90%E5%88%86%E6%9E%90?rs:Embed=true"   scrolling="auto" frameborder="0" id="iframe" class="frame" :onload="onloaded()"  >
+    <iframe src="https://bi.yinlu.com/reports/mobilereport/109%20%E4%BA%BA%E5%8A%9B%E8%B5%84%E6%BA%90%EF%BC%88HR%EF%BC%89/%E8%90%A5%E4%B8%9A%E9%83%A8%E4%BA%BA%E5%8A%9B%E8%B5%84%E6%BA%90%E5%88%86%E6%9E%90?rs:Embed=true"  scrolling="no"    id="iframe" class="frame"   >
     </iframe>
   </div>
 </template>
@@ -26,11 +26,6 @@ export default {
     },
     load: function () {
       document.querySelector('#main-container ')
-    },
-    onloaded: function () {
-      if (this.loading) {
-        this.loading.close()
-      }
     }
   },
   mounted () {

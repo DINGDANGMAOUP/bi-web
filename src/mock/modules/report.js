@@ -3542,7 +3542,7 @@ export function getReports () {
 
   }
   return {
-    url: 'list/all',
+    url: 'menu/tree',
     type: 'get',
     data: reports
   }
