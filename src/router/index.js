@@ -7,6 +7,7 @@ import Login from '@/views/Login'
 import store from '@/store'
 import NavBar from '@/views/Layout/NavBar'
 import IFrame from '../views/IFrame/IFrame'
+import FirstMenu from '../views/FirstMenu'
 Vue.use(Router)
 
 const router = new Router({
@@ -17,7 +18,7 @@ const router = new Router({
       component: Home,
       children: [
         {
-          path: '',
+          path: '/first',
           name: '导航',
           component: NavBar
         },
@@ -25,6 +26,11 @@ const router = new Router({
           path: '/iframe',
           name: '',
           component: IFrame
+        },
+        {
+          path: '',
+          name: '',
+          component: FirstMenu
         }
       ]
     },

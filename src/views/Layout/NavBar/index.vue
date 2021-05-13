@@ -9,7 +9,7 @@
                   :key="fIndex"
                   v-if="fIndex%3===0"
           >
-            <v-card-title>{{ first.rname }}</v-card-title>
+<!--            <v-card-title>{{ first.rname }}</v-card-title>-->
             <v-list
               class="pink lighten-5 "
               nav
@@ -45,7 +45,7 @@
             class="mx-auto indigo lighten-2"
             outlined
             v-for="(first,fIndex) in list" :key="fIndex" v-if="fIndex%3===1">
-            <v-card-title>{{ first.rname }}</v-card-title>
+<!--            <v-card-title>{{ first.rname }}</v-card-title>-->
             <v-list
               class="indigo lighten-5"
               nav
@@ -75,7 +75,7 @@
             class="mx-auto light-green lighten-2"
             outlined
             v-for="(first,fIndex) in list" :key="fIndex" v-if="fIndex%3===2">
-            <v-card-title>{{ first.rname }}</v-card-title>
+<!--            <v-card-title>{{ first.rname }}</v-card-title>-->
             <v-list
               class="light-green lighten-5"
               nav
